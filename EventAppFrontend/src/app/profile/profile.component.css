@@ -1,0 +1,194 @@
+#editBtn{
+  width: 12vmax;
+  padding: 1vmax;
+  font-size: 1.2vmax;
+  border-radius: 2vmax;
+  background: none;
+  color: black;
+  position: fixed;
+  top: 88%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 .1vmax .1vmax 0 rgba(0, 0, 0, 0.2), 0 1vmax 1vmax 0 rgba(0, 0, 0, 0.15);
+  font-family: 'Noto Serif Khojki', serif;
+}
+
+#position{
+  position: absolute;
+  top: 5.9vmax;
+  left: 1%;
+  height: 65%;
+  width: 98%;
+}
+
+#profilebox{
+  width: 50vmax;    
+  height: 100%;
+  overflow: scroll;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: .5vmax;
+}
+#profilebox::-webkit-scrollbar{
+  width: 0%;
+  height: 0%;
+}
+#proPic{
+  width: 20vmax;
+  height: 20vmax;
+  margin-bottom: 10%;
+  background-image: url('/assets/images/propic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -3%;
+}
+#picIcon{
+  position: relative;
+  margin-top: 17vmax;
+  margin-left: 14vmax;
+  font-size: 1.5vmax;
+}
+#contentBox{
+  width: 90%;
+  height: 85%;
+  margin: 5%;
+  margin-top: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 3%;
+  justify-content: center;
+  font-family: 'Noto Serif Khojki', serif;
+  overflow: scroll;
+}
+#contentBox::-webkit-scrollbar{
+  width: 0%;
+  height: 0%;
+}
+.head{
+  height: 4vmax;
+  text-align: left;
+  font-size: 1.2vmax;
+  font-weight: 600;
+}
+.body{
+  font-size: 1.2vmax;
+  height: 4vmax;
+  font-weight: 300;
+}
+.uname{
+  text-transform: uppercase;
+  font-family: 'Noto Serif Khojki', serif;
+  font-size: 2vmax;
+  background: none;
+  font-weight: 500;
+  margin-bottom: 3vmax;
+  color: black;
+}
+input:disabled{
+  color: black;
+  border: none;
+  /* box-shadow: none; */
+}
+.width{
+ width: 30vmax;
+}
+.editicon{
+  position: relative;
+  margin-left: .5vmax;
+  font-size: 1vmax;
+}
+#userid{
+  width: 8vmax;
+  height: 3vmax;
+  position: relative;
+  margin-top: .5vmax;
+  margin-left: 3vmax;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  background: none;
+  border-radius: .5vmax;
+  font-family: 'Noto Serif Khojki', serif;
+  font-size: 1vmax;
+  font-weight: 500;
+}
+
+.details{
+  font-size: 1.2vmax;
+  line-height: 2;
+  color: black;
+  text-align: left;
+  font-weight: 400;
+}
+#about{
+  margin-top: 1vmax;
+ 
+}
+#aboutField{
+  width: 80%;
+  height: 4vmax;
+  margin-top: .3vmax;
+  margin-left: 1%;
+  font-size: 1vmax;
+  border:none;
+  border-radius: .5vmax;
+  padding-left: 1vmax;
+}
+
+#changepswd{
+  font-size: 1.7vmax;
+  margin-bottom: 2vmax;
+  margin-top: 2vmax;
+}
+label{
+  font-size: 1.2vmax;
+  margin-right: 1vmax;
+  width: 11vmax;
+  height: 3vmax;
+}
+#curpswdlabel{
+  margin-bottom: 2vmax;
+}
+#curPswd{
+  height: 2.5vmax;
+  width: 20vmax;
+  background: none;
+  border: none;
+  border-bottom: .01vmax solid grey;
+}
+
+.iconIn{
+  position: relative;
+  font-size: 1vmax;
+  margin-top: .8vmax;
+  margin-left: -2vmax ;
+}
+
+.newpswdInp{
+  height: 2.5vmax;
+  width: 17vmax;
+  background: none;
+  border: none;
+  border-bottom: .01vmax solid grey;
+}
+
+.newIcon{
+  position: static;
+  font-size: 1vmax;
+  margin-top: -1vmax;
+  margin-left: 15vmax ;
+}
+
+#pswdBtn{
+  width: 12vmax;
+  padding: 1vmax;
+  font-size: 1.2vmax;
+  border-radius: 2vmax;
+  background: none;
+  color: black;
+  box-shadow: 0 .1vmax .1vmax 0 rgba(0, 0, 0, 0.2), 0 1vmax 1vmax 0 rgba(0, 0, 0, 0.15);
+  font-family: 'Noto Serif Khojki', serif;
+  margin-top: 1.5vmax;
+  margin-left: 7vmax;
+}
+#pswdBtn:hover{
+  background-color: rgb(81, 81, 233);
+  color: whitesmoke;
+}

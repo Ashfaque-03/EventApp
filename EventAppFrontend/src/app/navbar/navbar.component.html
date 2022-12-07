@@ -1,0 +1,86 @@
+<!-- whole settings and navbar -->
+<div id="" class="">   
+    <!-- NavBar -->
+    <div id="navBar">
+        <div id="app">
+            <!-- logo -->
+            <div id="applogo"></div>
+            <!-- app name -->
+            <div id="appNamebox"><span class="fappname">A</span>LL <span class="fappname">E</span>VENTS</div>
+        </div>
+
+        <!-- content center navbar -->
+        <div id="searchposition"> 
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search Event" aria-label="Search" id="searchInp">
+                <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+            </form>
+        </div>
+
+        <!-- profile -->
+        <div id="profileBox" type="button" (click)="OptClose()" *ngIf="settingShow==false">
+            <div id="pro_pic" class="container"></div>
+            <div id="username">{{userName}}</div>
+        </div>
+
+
+    </div>
+
+    <!-- logged details box -->        <!-- logged details box -->         <!-- logged details box -->
+    <div id="logposition" *ngIf="logsShow==true">
+        <h2 class="mt-4 text-center boxShadow container">Logging Details</h2>
+        <div id="logsBox" class="d-block container-fluid p-0 mt-4">
+            <table class="table" style="line-height: 3;">
+                <thead class="table">
+                    <tr class="">
+                        <!-- <th scope="row" style="width: 300px;">Sl.No</th>
+                        <th scope="col" style="width: 350px;">Status</th> -->
+                        <th scope="row" style="width: 150px;">Sl.No</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Log Time</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr *ngFor="let data of logsArray">
+                        <th scope="row" id="slno" ></th>
+                        <td scope="col" >{{data.Status}}</td>
+                        <td scope="col">{{data.Time | date :'full'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center regdetail mt-3"><h3>Your account is registered since <br>{{RegisteredDetails | date :'full'}}</h3></div>
+    </div>
+    <!-- logged details box closed-->                 <!-- logged details box closed-->                <!-- logged details box closed-->
+
+
+
+     <!-- popup component  -->
+     <app-popup [Ok]="Ok" [alertOn]="logAlert" [alertMsg]="msg" [cancelOn]="cancelBtn" (okBtn)="logOk()" (cancelBtn)="logcancel()"></app-popup>
+
+        <!-- option /settings button -->
+        <div id="optBox" *ngIf="settingShow==true">
+            <div style="text-align: right;" type="button" (click)="OptClose()"><i class="fa fa-close" ></i></div>
+            <div id="">
+                <div id="pro_pic" class="container"></div>
+                <div id="username">{{userName}}</div>
+                <div id="prolinkbox"><a type="button" id="proLink" (click)="showPro()">profile <i class="fa fa-edit"></i></a></div>
+            </div>
+            <div>
+                <button class="optBtn" (click)="addedShow()">Saved Events</button>
+                <button class="optBtn" (click)="cartShow()">Cart</button>
+                <button class="optBtn" (click)="deletedShow()">Deleted Events</button>
+                <button class="optBtn" (click)="settings()">Settings</button>
+                    <!-- account settings -->
+                    <div id="accSettings" *ngIf="accSettingshow==true">
+                        <button class="optBtn settingBtn" (click)="logdetails()">Logging details</button>
+                        <button class="optBtn settingBtn" (click)="security()">Security</button>
+                        <button class="optBtn settingBtn" (click)="AccDelete()">Delete Account</button>
+
+                    </div>
+                <button class="optBtn"  (click)="logout()">Logout</button>
+            </div>
+        </div>
+
+</div> 
+      

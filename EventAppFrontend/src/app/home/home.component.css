@@ -1,0 +1,273 @@
+/* login style */
+#navBar{
+    position: fixed;
+    margin: 1vmax;
+}
+
+/* #loginOuter{
+    border-radius: 2vmax;
+    background-color: whitesmoke;
+
+} */
+.rightcentered{
+    position: fixed;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    /* transform: translate(0%, -50%); */
+}
+
+#loginOuterbox{
+    width: 26vmax;
+    height: 33vmax;
+    border-radius: 1vmax;
+    /* background-color: white; */
+    /* background-image: url('/assets/images/bg10.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 .4vmax 1.2vmax 0 rgba(0, 0, 0, 0.2), 0 .8vmax 2vmax 0 rgba(0, 0, 0, 0.19);
+    font-size: 3vmax;
+    font-family: 'Noto Serif Khojki', serif;
+    padding-top:2vmax ;
+    /* color: white; */
+}
+/* .logreg{
+    font-size: 1vmax;
+    border: none;
+    background: none;
+    width: 50%;
+} */
+
+#logBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logLabel{
+    font-size: 1vmax;
+    font-weight: 400;
+}
+.logInp{
+    width: 16vmax;
+    height: 2.9vmax;
+    margin-bottom: -1vmax;
+    /* font-weight: 600; */
+    font-size: .8vmax;
+    padding-left: 2vmax;
+    /* font-family: 'Noto Serif Khojki', serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Noto Serif Khojki', serif;
+    background: none;
+    border: none;
+    border-bottom: .1vmax solid grey;
+}
+
+.logInp:focus{
+    background: none;
+}
+/* .iconIn{
+    position: absolute;
+    font-size: 1px;
+    margin-top: -1.1vmax;
+    margin-left:.5vmax ;
+    font-weight: 510;
+    color: black;
+}
+.showHide{
+    margin-top: -1vmax;
+    margin-left: 13.5vmax;
+    font-size: 1.2vmax;
+} */
+.loginmsg{
+    width: 16vmax;
+    font-size: .8vmax;
+    padding: 0%;
+    position: absolute;
+    color: #9c0c0c;
+    margin-top: 1vmax;
+    text-align: right;
+}
+.logBtn{
+    width: 16vmax;
+    height: 3.3vmax;
+    font-size: 1.2vmax;
+    margin-top: 2.4vmax;
+    margin-bottom: -1vmax;
+    font-weight: 100;
+}
+.logBtn:hover{
+    font-size: 1.25vmax;
+    border: .1vmax solid green;
+}
+#linkBox{
+   position: absolute;
+   text-align: center;
+   display: flex;
+   margin-top: 5vmax;
+   margin-left: -3vmax;
+}
+#link{
+    width: 10vmax;
+    margin-top: .5vmax;
+    font-size: 1vmax;
+    text-decoration: none;
+    color: #9c0c0c;
+}
+#link:hover{
+    font-size: 1.1vmax;
+    /* text-decoration: underline; */
+}
+#createName{
+    margin-left: -2vmax;
+    margin-top: .5vmax;
+    width: 15vmax;
+    font-size: 1vmax;
+    background: none;
+    font-weight: 400;
+    line-height: 1.4;
+    /* font-family: 'Lobster', cursive; */
+    /* border-radius: 1vmax; */
+    border: none;
+}
+#createName:hover{
+    font-size: 1.7vmax;
+    margin-top: -1.5vmax;
+}
+
+
+
+/* register style */
+
+
+#regOuter{
+    /* border: 1vmax solid white; */
+    border-radius: 3vmax;
+}
+
+#regOuterbox{
+    width: 50vmax;
+    height: 37vmax;
+    border-radius: 1vmax;
+    /* background-color: white; */
+    /* background-image: url('src/assets/images/reg_bg1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 .4vmax 1.2vmax 0 rgba(0, 0, 0, 0.2), 0 .8vmax 2vmax 0 rgba(0, 0, 0, 0.19);
+    font-size: 3vmax;
+    font-weight: 400;
+    font-family: 'Noto Serif Khojki', serif;
+    padding-top:1.3vmax ;
+
+}
+#RegName{
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-size: 2.5vmax; */
+    font-weight: 500;
+}
+#regBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#regformbox{
+    display: flex;
+}
+.regLabel{
+    font-size: 1vmax;
+    font-weight: 500;
+    /* font-family: 'Abril Fatface', cursive; */
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+#uname{
+    text-transform: capitalize;
+}
+#uname::placeholder{
+    text-transform: lowercase;
+}
+.regInp{
+    width: 16vmax;
+    height: 2.9vmax;
+    margin-bottom: -1vmax;
+    /* font-weight: 600; */
+    font-size: .8vmax;
+    padding-left: 2vmax;
+    /* font-family: 'Noto Serif Khojki', serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    background: none;
+    border: none;
+    border-bottom: .1vmax solid grey;
+}
+
+.regInp:focus{
+    background: none;
+}
+.iconIn{
+    position: absolute;
+    font-size: 1vmax;
+    margin-top: -1.1vmax;
+    margin-left:.5vmax ;
+}
+
+.errorMsg{
+    width: 16vmax;
+    font-size: .8vmax;
+    position: absolute;
+    margin-top: 1vmax;
+    text-align: end;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+    color: rgb(158, 10, 10);
+}
+/* .cancelIcon{
+    font-size: 1vmax;
+} */
+.showHide{
+    margin-top: -1vmax;
+    margin-left: 13.5vmax;
+    font-size: 1vmax;
+}
+.regBtn{
+    width: 16vmax;
+    height: 3.3vmax;
+    font-size: 1.2vmax;
+    margin-top: 3vmax;
+    margin-bottom: -1.5vmax;
+    font-weight: 100;
+    /* font-family: 'Lobster Two', cursive; */
+}
+.regBtn:hover{
+    font-size: 1.25vmax;
+    border: .1vmax solid green;
+}
+#reglinkBox{
+   margin-top: 3vmax;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+}
+#logdes{
+    margin-top: .5vmax;
+    font-size: 1vmax;
+    text-decoration: none;
+    color: #9c0c0c;
+}
+/* #reglink:hover{
+    font-size: 1.1vmax;
+    text-decoration: underline; 
+} */
+#loginName{
+    width: 7vmax;
+    font-size: 1.5vmax;
+    background: none;
+    /* border-radius: 1vmax; */
+    border: none;
+}
+#loginName:hover{
+    font-size: 1.8vmax;
+}
+#regerror{
+    position: absolute;
+    margin-left: -10vmax;
+    margin-top: -1vmax;
+
+}

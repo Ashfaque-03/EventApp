@@ -1,0 +1,125 @@
+<!-- <app-login [loginOn]="logOn" (onRegister)="registerOn($event)"></app-login>
+<app-register [regOn]="logOff"></app-register> -->
+
+    <!-- NavBar -->
+    <div id="navBar">
+        <div id="app">
+            <!-- logo -->
+            <div id="applogo"></div>
+            <!-- app name -->
+            <div id="appNamebox"><span class="fappname">A</span>LL <span class="fappname">E</span>VENTS</div>
+        </div>
+
+        <!-- content center navbar -->
+        <div> </div>
+
+        <!-- profile -->
+        <!-- <div id="profileBox" type="button" (click)="OptClose()" *ngIf="settings==false">
+            <div id="pro_pic" class="container"></div>
+            <div id="username">{{userName}}</div>
+        </div> -->
+
+    </div>
+<!-- login box -->
+
+<div id="loginOuter" class="centered" *ngIf="logOn==true">
+    <div id="loginOuterbox" >
+        <!-- <button class="logreg" id="logbtnup">Login</button>
+        <button class="logreg">Register</button> -->
+        <div class="text-center" id="logName">Log In</div>
+        <div id="logBox" class="">
+            <form action="" >
+                <label for="userId" class="logLabel">User id:</label>
+                <input type="text" [(ngModel)]="userId" name="userId" id="userId" class="form-control logInp" placeholder="user id / mobile number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <i class="fa fa-user iconIn"></i>
+                <p *ngIf="errormsg==true" class="loginmsg">*wrong user id or password</p>   
+                <label for="password" class="logLabel">Password:</label>
+                <input [type]="inpType" [(ngModel)]="pswrd" name="password" id="password" class="form-control logInp" placeholder="password">      
+                <i class="fa fa-lock iconIn"></i>        
+                <i class="fa fa-eye iconIn showHide" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                <i class="fa fa-eye-slash  iconIn showHide" type="button" *ngIf="visibility==false" (click)="hideShow()"></i>  
+                <p *ngIf="errormsg==true" class="loginmsg">*wrong user id or password</p>   
+                <button class="form-control logBtn bg-success text-white" (click)="loginCheck()">Log In</button>   
+                <!-- <input type="submit" name="" id="" class="form-control logBtn bg-success text-white" value=""> -->
+                <div class="" id="linkBox">
+                    <a href="" id="link">forget password ?</a>
+                    <button id="createName" (click)="createLink()">Create Your Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- register box -->
+
+<!-- <span class="material-symbols-outlined cancelIcon">cancel</span> -->
+<div id="regOuter" class="centered" *ngIf="logOn==false">
+    <div id="regOuterbox" >
+        <div class="text-center" id="RegName">Create Your Account</div>
+        <div id="regBox" >
+            <form (ngSubmit)="registerCheck()" [formGroup]="registerForm">
+                <div id="regformbox">
+                    <div class="me-5">
+                        <label for="uname" class="regLabel">Name:</label>
+                        <input type="text" formControlName="uname" name="uname" id="uname" class="form-control regInp" placeholder="enter your full name">
+                        <i class="fa fa-user iconIn"></i>
+                        <div class="errorMsg " *ngIf="(this.registerForm.get('uname')?.errors)&&(this.registerForm.get('uname')?.touched)" >
+                            <span>*use alphabets only</span> 
+                        </div>                
+                        <label for="email" class="regLabel">E-mail:</label>
+                        <input type="email" formControlName="email" name="email" id="email" class="form-control regInp" placeholder="enter your email id">      
+                        <i class="fa fa-envelope iconIn" style="font-size: 1vmax;"></i>           
+                        <div class="errorMsg " *ngIf="(this.registerForm.get('email')?.errors)&&(this.registerForm.get('email')?.touched)" >
+                            <span>*must enter a valid email id</span> 
+                        </div>
+                        <label for="pswd" class="regLabel">Password:</label>
+                        <input [type]="inpType" formControlName="pswd" name="pswd" id="pswd" class="form-control regInp" placeholder="password">      
+                        <i class="fa fa-lock iconIn"></i>        
+                        <i class="fa fa-eye iconIn showHide" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                        <i class="fa fa-eye-slash  iconIn showHide" type="button" *ngIf="visibility==false" (click)="hideShow()"></i> 
+                        <div class="errorMsg" style="text-align: start;" *ngIf="(this.registerForm.get('pswd')?.errors)&&(this.registerForm.get('pswd')?.touched)" >
+                            <span>*must include a lower case, upper case, number, special and min 8 characters</span> 
+                        </div>                    
+                    </div>
+    
+                    <div>
+                        <label for="phno" class="regLabel">Mobile Number:</label>
+                        <input type="text" formControlName="phno" name="phno" id="phno" class="form-control regInp" placeholder="enter a valid mobile number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        <i class="fa fa-phone iconIn"></i>
+                        <div class="errorMsg " *ngIf="(this.registerForm.get('phno')?.errors)&&(this.registerForm.get('phno')?.touched)">
+                            <span>*must contain 10 digits</span> 
+                        </div>
+                        <label for="dob" class="regLabel">Date of Birth:</label>
+                        <input type="date" formControlName="dob" name="dob" id="dob" class="form-control regInp">      
+                        <i class="fa fa-calendar iconIn" style="font-size: 1vmax;"></i>          
+                        <div class="errorMsg " *ngIf="(this.registerForm.get('dob')?.errors)&&(this.registerForm.get('dob')?.touched)" >
+                            <span>*must enter your date of birth</span> 
+                        </div>
+                        <label for="pswdC" class="regLabel">Confirm Password:</label>
+                        <input [type]="inpType" formControlName="pswdC" name="pswdC" id="pswdC" class="form-control regInp" placeholder="confirm password">      
+                        <i class="fa fa-lock iconIn"></i>        
+                        <i class="fa fa-eye iconIn showHide" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                        <i class="fa fa-eye-slash  iconIn showHide" type="button" *ngIf="visibility==false" (click)="hideShow()"></i> 
+                        <div class="errorMsg " *ngIf="passerror==true" >
+                            <span>*must same as password</span> 
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="form-control regBtn bg-success text-white container" type="submit">Register</button> 
+                <p *ngIf="enterinp==true" class="loginmsg" id="regerror">*please fill all fields</p>   
+                <!-- <input type="submit" name="" id="" class="form-control logBtn bg-success text-white" value=""> -->
+                <div class="" id="reglinkBox">
+                    <span id="logdes">Already have an account !</span>
+                    <button id="loginName" (click)="loginLink()">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- popUp box -->
+<app-popup [alertOn]="onAlert" [alertMsg]="regAlert" [userCode]="uCode" (okBtn)="popupalert()"></app-popup>
+
+<!-- <div class="centered">hghg</div> -->

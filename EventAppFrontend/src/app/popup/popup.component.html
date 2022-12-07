@@ -1,0 +1,128 @@
+<!-- alert -->
+<div class="bgBox centered" *ngIf="alertOn==true">
+    <div class="centered popupBox">
+        <div class="text-center">
+            <div>
+                <span class="alertText ">{{alertMsg}}</span><br>
+                <span class="alertText " *ngIf="alertMsg2">Event Date : {{alertMsg2 | date : 'fullDate'}}</span><br>
+                <div class="ucode container" *ngIf="userCode"><span class="alertText">{{userCode}}</span></div>
+            </div>
+            <div class="alertBtnBox text-right">
+                <button class="alertBtn btn" (click)="cancel()" *ngIf="cancelOn==true" type="submit">Cancel</button>
+                <button class="alertBtn btn" (click)="ok()" type="submit" *ngIf="Ok!='Delete'">{{Ok}}</button>
+                <button class="alertBtn delbtn btn" (click)="ok()" type="submit" *ngIf="Ok=='Delete'">{{Ok}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- for register alert -->
+<!-- <div class="vh-100 bgBox " *ngIf="alertOn==true">
+    <div class="centered popupBox">
+        <div class="text-center">
+            <div><span class="alertText">{{registerAlert}}</span></div>
+            <div class="alertBtnBox text-right">
+                <button class="alertBtn bg-primary" (click)="cancel()">Cancel</button>
+                <button class="alertBtn btn"(click)="ok()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- substitute for events selection -->
+<!-- <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="displayCenter eventBox" >.</div>
+      </div>
+      <div class="carousel-item"*ngFor="let data of eventaddArray">
+        <div class="displayCenter eventBox ">Engagement</div>
+      </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox " >Reception</div>
+      </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox " >Birthday</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Death<br>Ceremony</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Photography</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Catering</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Conferencing</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Inauguration</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >College Fest</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Job Fair</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Festivals</div>
+    </div>
+      <div class="carousel-item">
+        <div class="displayCenter eventBox" >Sports</div>
+    </div>
+    </div>
+
+    btn space
+    
+  </div> -->
+
+
+          <!-- eventsBox -->
+        <!-- <div class="mt-5 pt-5" *ngIf="addEname==true">
+            <form action="">
+                <h3 class="text-center">{{eventHead}}</h3>
+                <button class="leftRightBtn" id="leftbtn" (click)="scrollLeft()"><i class='fas fa-chevron-left'></i></button>
+                <button class="leftRightBtn" id="rightbtn" (click)="scrollRight()"><i class='fas fa-chevron-right'></i></button>
+                <div id="scroll" class="container" #widgetsContent>  
+                    <div class="di text-center">
+                        <div *ngFor="let data of eventNamesArray">
+                            <div class="displayCenter eventBox" >{{data}}</div>
+                            <input type="submit" id="selectNameBtn" class="text-center mt-3 btn" (click)="selectEname(data)" value="Select">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+<!-- cofirm order -->
+
+          <!-- <div class="centered text-center pb-5 mb-5" *ngIf="Econfirm==true">
+            <h2>Confirm Your order</h2>
+            <div class="confirmData mt-5 pb-5">
+                <table class="table border border-rounded fs-5">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th scope="col" class="">Event Name</th>
+                            <th scope="col">:</th>
+                            <td scope="col">{{Ename}}</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-secondary">
+                        <tr>
+                            <th scope="col" class="">Event Date</th>
+                            <th scope="col">:</th>
+                            <td scope="col">{{Edate | date :'fullDate'}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="">User id</th>
+                            <th scope="col">:</th>
+                            <td scope="col">{{userId}}</td>
+                        </tr>
+                    </tbody>
+                </table>            
+                <input type="submit" id="selectBtn"  class="container text-center bg-primary mt-3 btn displayCenter" (click)="confirmEvent()" value="Confirm">    
+            </div>
+        </div> -->
+

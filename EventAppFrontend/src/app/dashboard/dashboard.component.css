@@ -1,0 +1,536 @@
+#dashOut{
+    width: 100%;
+    height: 70%;
+    transition: all 0.5s;
+
+}
+#dashBody{
+    width: 100%;
+    transition: all 0.5s;
+
+}
+
+#welcomeText{
+    margin-top: 7vmax;
+    font-size: 2.5vmax;
+    font-weight: 600;
+    font-family: 'Noto Serif Khojki', serif;
+    text-transform: capitalize;
+    transition: all 0.5s;
+
+}
+#getstarted{
+    width: 20vmax;
+    height: 5vmax;
+    font-size: 2vmax;
+    margin-top: 13vmax;
+    transition: all 0.5s;
+
+}
+#getstarted:hover{
+    font-size: 2.5vmax;
+}
+
+#entryPage{
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Serif Khojki', serif;
+    transition: all 0.5s;
+    position: fixed;
+
+}
+
+#eventSlide{
+    margin-top: -15%;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30vmax;
+}
+
+.evtImg{
+    width: 100%;
+    height: 100%;
+    /* margin-top: 6vmax; */
+    /* mar */
+}
+.indicatorsImg{
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    margin-left: 0%;
+    left: 0%;
+    bottom: 15%;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+}
+.btnindi{
+    border-radius: 100%;
+    width: 1vmax;
+    height: 1vmax;
+    background-color: white;
+    margin: .5vmax;
+}
+.btnindi:focus{
+    background-color: white;
+}
+
+.posi{
+    /* height: 90%; */
+    margin-top: 6vmax;
+}
+.fappname{
+    font-size: 3vmax;
+}
+#appname{
+    font-size: 2vmax;
+}
+.first{
+    width: 100%;
+    position: absolute;
+    margin-left: 0%;
+    left: 0%;
+    bottom: 15%;
+    padding-top: 1.5vmax;
+    padding-bottom: 4vmax;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.details{
+    width: 100%;
+    position: absolute;
+    margin-left: 0%;
+    left: 0%;
+    bottom: 15%;
+    padding-top: 1.5vmax;
+    padding-bottom: 3.5vmax;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.eventdescription{
+    padding-left: 10vmax;
+    padding-right: 10vmax;
+}
+#msgoutBox{
+    width: 30vmax;
+    height: 30vmax;
+    position: fixed;
+    top:6.5vmax;
+    right: 1%;
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 30vmax;
+    border-radius: 1vmax;
+}
+#maxBtn{
+    position: fixed;
+    top: 6.5vmax;
+    right: .5%;
+    width: 6.5vmax;
+    height: 3vmax;
+    font-size: 1vmax;
+    background: none;
+    border: none;
+    border-radius: .5vmax;
+    border-top-right-radius: 0vmax;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    box-shadow: 1vmax 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    transition: all 1s;
+}
+#msgBox{
+    width: 30vmax;
+    height: 30vmax;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    background-color: rgba(255, 255, 255,.8);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 1vmax;
+}
+.msgHead{
+    font-size: 2vmax;
+    margin: 0%;
+    height: 4vmax;
+    background-color: rgba(255, 255, 255,1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    font-weight: 500;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0%;
+    width: 30vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 1vmax;
+}
+#minusIcon{
+    position: absolute;
+    font-size: 1vmax;
+    padding: 1vmax;
+    top: 2%;
+    right: 8%;
+    transition: all 1s;
+}
+
+#msgcomment{
+    margin-top: 5vmax;
+    font-size: .9vmax;
+}
+.msg{
+    margin:1vmax;
+    padding-left: 1vmax;
+    padding-right: 1vmax;
+    padding-top: .3vmax;
+    padding-bottom: .3vmax;
+    margin-bottom: 0vmax;
+    margin-top: .5vmax;
+    font-size: 1.3vmax;
+    color: white;
+    text-align: left;
+    background-color: rgb(7, 16, 64);
+    border-bottom-left-radius: .7vmax;
+    border-bottom-right-radius: .5vmax;
+    border-top-right-radius: .5vmax;
+    word-break: break-all;
+}
+
+#pointposition{
+    font-size: .8vmax;
+    color: rgb(217, 209, 209);
+    text-align: right;
+}
+.lastspace{
+    width: 100%;
+    height: 5vmax;
+}
+#msgtab{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: white;
+    width: 100%;
+    padding-top: .8vmax;
+    padding-bottom: .8vmax;
+    border-radius: 1vmax;
+
+}
+#msginp{
+    width: 22vmax;
+    height: 3vmax;
+    margin-right: .5vmax;
+    border-radius: .5vmax;
+    padding-left: 1vmax;
+    /* border: .2vmax solid rgb(6, 6, 41); */
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    transition: all 0.5s;
+}
+#msginp:focus{
+    border: .1vmax solid rgb(7, 16, 64);
+}
+#chatbtn{
+    height: 3vmax;
+    border: none;
+    background: none;
+    border-radius: .5vmax;
+    font-size: 1.1vmax;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    transition: all 0.5s;
+}
+
+#chatbtn:hover{
+    background-color: rgb(19, 19, 67);
+    color: white;
+}
+/*  */
+#addBtn{
+    width: 12vmax;
+    padding: 1vmax;
+    font-size: 1.2vmax;
+    border-radius: 2vmax;
+    background: none;
+    color: black;
+    position: fixed;
+    top: 90%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 .1vmax .1vmax 0 rgba(0, 0, 0, 0.2), 0 1vmax 1vmax 0 rgba(0, 0, 0, 0.15);
+    font-family: 'Noto Serif Khojki', serif;
+}
+#eventnamebox{
+    width:100%;
+    height: 90%;
+    margin-top: 110px;    
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 1vmax;
+    font-size: 1.5vmax;
+    font-weight: 600;
+    word-wrap: break-word;
+    padding-top: -7vmax;
+    padding-bottom: 10vmax;
+}
+
+.hoverBox{
+    width: 20vmax;
+    height: 10vmax;
+    float: left;
+}
+.evtnamebox{
+    width: 19vmax;
+    height: 9vmax;
+    float: left;
+    margin: 1vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 1vmax;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    text-transform: uppercase;
+}
+
+.evtnamebox:hover{
+    width: 19.5vmax;
+    height: 9.5vmax;
+    font-size: 1.6vmax;
+    color: white;
+    background-color: rgb(81, 81, 233);
+}
+
+#evtname{
+    width: 19vmax;
+    height: 9vmax;
+    text-transform: uppercase;
+} 
+
+#eventdatebox{
+    margin-top: 130px;
+    margin-left: 1vmax;
+    width:95%;
+    position: absolute;
+    overflow-x: hidden;
+    border-radius: 1vmax;
+    font-size: 1.5vmax;
+    font-weight: 600;
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+.dateBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthBtn{
+    width: 80%;
+    height:10vmax;
+    background: none;
+    border-radius: 1vmax;
+    margin: 1vmax;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+.monthBtn:hover{
+    background-color: rgb(81, 81, 233);
+    color: white;
+}
+.dayBtn{
+    width: 100%;
+    height:5vmax;
+    background: none;
+    border-radius: 1vmax;
+    margin: 1vmax;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+.dayBtn:hover{
+    background-color: rgb(81, 81, 233);
+    color: white;
+}
+.yearBtn{
+    width: 100%;
+    height:7vmax;
+    background: none;
+    border-radius: 1vmax;
+    margin: 1vmax;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+.yearBtn:hover{
+    background-color: rgb(81, 81, 233);
+    color: white;
+}
+
+
+#prev{
+    width: 6vmax;
+    font-size: 1.8vmax;
+    border-radius: 1vmax;
+    background: rgba(255, 255, 255, 0.15);
+    color: black;
+    position: fixed;
+    top: 165px;
+    left: 4.5%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 .1vmax .1vmax 0 rgba(0, 0, 0, 0.2), 0 1vmax 1vmax 0 rgba(0, 0, 0, 0.15);
+    font-family: 'Noto Serif Khojki', serif;
+}
+#prev:hover{
+    font-size: 2vmax;
+    background-color: white;
+}
+
+/* confirm box */
+#EconfirmBox{
+    margin-top: 2vmax;
+    width: 40vmax;
+    height: 30vmax;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    line-height: 3;
+    font-size: 1.3vmax;
+    font-weight: 500;
+    border-radius: 1vmax;
+}   
+
+
+.confirmShadow{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    text-align: left;  
+    padding: 4vmax;
+    border-radius: 1vmax;
+    margin-top: -.8vmax;
+}
+.cnfmheight{
+    height: 4vmax;
+    align-items: center;
+}
+.Econfirm{
+    width: 15vmax;
+    padding-left: 2vmax;
+    font-weight: 400;
+    font-size: 1vmax;
+    align-items: center;
+}
+.Econfirmhead{
+    width: 9vmax;
+}
+.marginT{
+    margin-top: .55vmax;
+}
+
+.selectBtn{
+    width: 8vmax;
+    padding: 1vmax;
+    font-size: 1.1vmax;
+    border-radius: 2vmax;
+    background: none;
+    box-shadow: 0 .1vmax .1vmax 0 rgba(0, 0, 0, 0.2), 0 1vmax 1vmax 0 rgba(0, 0, 0, 0.15);
+    font-family: 'Noto Serif Khojki', serif;
+}
+.confirmtext{
+    position: absolute;
+    margin-top: 8vmax;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3vmax;
+    font-size: 1.5vmax;
+    border-radius: .5vmax;
+}
+#confirmBtn{
+    position: absolute;
+    margin-top: 27vmax;
+    margin-left: 14vmax;
+    transform: translate(-50%, -50%);
+}
+#confirmBtn:hover{
+    font-size: 1.2vmax;
+    width: 9vmax;
+    background-color: rgb(81, 81, 233);
+    color: rgb(255, 255, 255);
+}
+
+#cartBtn{
+    position: absolute;
+    margin-top: 27vmax;
+    margin-left: 5vmax;
+    transform: translate(-50%, -50%);
+}
+
+#cartBtn:hover{
+    font-size: 1.3vmax;
+    width: 9vmax;
+    background-color: rgb(9, 110, 26);
+    color: rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: none;
+  }
+
+#eventposition{
+    position: absolute;
+    top: 5.9vmax;
+    left: 1%;
+    height: 65%;
+    width: 98%;
+}
+
+#evtBox{
+    counter-reset: Serial; 
+    height: 100%;
+    width: 50vmax;    
+    overflow: scroll;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .5vmax;
+
+}
+#evtBox::-webkit-scrollbar{
+    width: 0%;
+    height: 0%;
+}
+
+#thead{
+    position: sticky;
+    top: 0%;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 1.15vmax;
+    font-weight: 400;
+}
+tbody{
+    font-size: 1vmax;
+    font-weight: 400;
+}
+#slno:first-child:before{
+    counter-increment: Serial;      
+    content: counter(Serial); 
+}
+#iconcolor{
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1vmax;
+    margin-top: -4%;
+    align-items: center;
+    text-align: center;
+}
+.tableicon{
+    width:3vmax;
+    color: rgb(19, 2, 42);
+    font-size: 1vmax;
+}
+.tableicon:hover{
+    font-size: 1.1vmax;
+}

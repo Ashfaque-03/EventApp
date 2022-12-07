@@ -1,0 +1,101 @@
+<div *ngIf="showProfile==true" id="position">
+    <h2 class="mt-4 text-center boxShadow container">Profile</h2>
+    <div id="profilebox" class="container p-0 mt-4">
+        <div id="proPic" class="container"><i class='fas fa-edit'id="picIcon"></i></div>
+        <!-- <input type="file" name="" id="" placeholder="edit"> -->
+        <div id="contentBox">
+            <div style="width: 202%; display: flex;" *ngIf="security==false">
+                <div style="float: left; width: 50%; margin-right: 3%;">
+                    <div class="d-flex">
+                        <div class="uname width" *ngIf="Iname==true">{{Uname}}<i class="fas fa-pen editicon" *ngIf="editOn==false" type="button" (click)="editBtn()"></i></div>
+                        <input type="text" class="uname form-control" name="Uname" id="" [disabled]="Iname" [(ngModel)]='Uname' *ngIf="Iname==false" oninput="this.value = this.value.replace(/[^a-zA-z .]/g, '').replace(/(\..*)\./g, '$1');" >
+                        <button id="userid">{{Uid}}</button>
+                    </div>
+                    <div class="details">Born @ {{Udob | date : 'longDate'}}</div>
+                    <div class="details">{{Uemail}}</div>   
+                    <div class="details">{{Umobile}}</div>
+                    <div id="about">
+                        <h3>About</h3>
+                        <input type="text" class="form-control" name="aboutField" id="aboutField" [(ngModel)]="aboutField" maxlength="20" [disabled]="about">
+                    </div>          
+                </div>
+                <div style="float: left; width: 50%;">
+                    <form action="" (ngSubmit)="pswdCheck()" [formGroup]="pswdForm">
+                        <div id="changepswd">Change Password</div>
+                        <div class="d-flex ">
+                            <label for="curPswd" id="curpswdlabel">Current Password</label>
+                            <input [type]="inpType" formControlName='curPswd' name="curPswd" id="curPswd" class="form-control curpswdInp pinp">
+                            <i class="fa fa-eye iconIn" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                            <i class="fa fa-eye-slash  iconIn" type="button" *ngIf="visibility==false" (click)="hideShow()"></i> 
+                        </div>
+                        <div class="w-50 float-start">
+                            <label for="newPswd">New Password:</label>
+                            <input [type]="inpType" formControlName="newPswd" name="newPswd" id="newPswd" class="form-control newpswdInp pinp">
+                        </div>
+                        <div class="w-50 float-start">
+                            <label for="CnewPswd" class="w-100">Confirm New Password:</label>
+                            <input [type]="inpType" formControlName="CnewPswd" name="CnewPswd" id="CnewPswd" class="form-control newpswdInp pinp">
+                            <div class="container"><input type="submit" name="" id="pswdBtn" value="Save Changes" class="btn"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div style="float: left; width: 100%; margin-left: 1vmax;" *ngIf="security==true">
+                <form action="" (ngSubmit)="pswdCheck()" [formGroup]="pswdForm">
+                    <div id="changepswd">Change Password</div>
+                    <div class="d-flex ">
+                        <label for="curPswd" id="curpswdlabel">Current Password</label>
+                        <input [type]="inpType" formControlName='curPswd' name="curPswd" id="curPswd" class="form-control curpswdInp pinp">
+                        <i class="fa fa-eye iconIn" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                        <i class="fa fa-eye-slash  iconIn" type="button" *ngIf="visibility==false" (click)="hideShow()"></i> 
+                    </div>
+                    <div class="w-50 float-start">
+                        <label for="newPswd">New Password:</label>
+                        <input [type]="inpType" formControlName="newPswd" name="newPswd" id="newPswd" class="form-control newpswdInp pinp">
+                    </div>
+                    <div class="w-50 float-start">
+                        <label for="CnewPswd" class="w-100">Confirm New Password:</label>
+                        <input [type]="inpType" formControlName="CnewPswd" name="CnewPswd" id="CnewPswd" class="form-control newpswdInp pinp">
+                        <div class="container"><input type="submit" name="" id="pswdBtn" value="Save Changes" class="btn"></div>
+                    </div>
+                </form>
+            </div>
+               
+        </div>
+    </div>
+    <div *ngIf="security==false">
+        <button id="editBtn" class="btn"  (click)="editBtn()" *ngIf="editOn==false"><i class="" ></i><span> Edit Profile</span></button>    
+        <button id="editBtn" class="btn" (click)="saveBtn()" *ngIf="editOn==true"><i class="" ></i><span> Save changes</span></button>    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="fileToUpload">
+      <div class="profile-pic" style="background-image: url('https://randomuser.me/api/portraits/med/men/65.jpg')">
+          <span class="glyphicon glyphicon-camera"></span>
+          <span>Change Image</span>
+      </div>
+      </label>
+      <input type="File" name="fileToUpload" id="fileToUpload">
+    </form> -->
