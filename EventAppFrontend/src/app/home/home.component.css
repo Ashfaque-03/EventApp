@@ -128,10 +128,12 @@
     /* font-family: 'Lobster', cursive; */
     /* border-radius: 1vmax; */
     border: none;
+    transition: all 0.2s ease-in-out;
+    
 }
 #createName:hover{
-    font-size: 1.7vmax;
-    margin-top: -1.5vmax;
+    font-size: 1.2vmax;
+    margin-top: -1.vmax;
 }
 
 
