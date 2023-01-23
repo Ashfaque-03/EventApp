@@ -103,10 +103,12 @@ html,body{
 }
 
 .boxShadow{
-  width: 52vmax;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.boxHead{
+    width: 52vmax;
   padding-top: .5vmax;
   padding-bottom: .5vmax;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .displayCenter{
   display: flex;

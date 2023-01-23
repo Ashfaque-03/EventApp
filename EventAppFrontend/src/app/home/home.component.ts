@@ -51,8 +51,6 @@ export class HomeComponent implements OnInit{
    if(this.visibility==false){
      this.visibility=true
      this.inpType="text"
-    //  console.log(this.userId)
-    // console.log(this.pswrd)
    }
    else{
      this.visibility=false
@@ -137,9 +135,15 @@ export class HomeComponent implements OnInit{
         this.onAlert=true
         this.regAlert=result.message
         this.loginSignal=true
+        localStorage.removeItem('userId')
+        localStorage.removeItem('welcomeBox')
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
         localStorage.setItem("userId",JSON.stringify(result.userId))           
         localStorage.setItem("welcomeBox",JSON.stringify(result.welcomebox)) 
-        localStorage.setItem("token",JSON.stringify(result.token))     
+        localStorage.setItem("token",JSON.stringify(result.token))   
+        localStorage.setItem("user",JSON.stringify("customer"))     
+  
         this.errormsg=false
       }
     },(result=>{

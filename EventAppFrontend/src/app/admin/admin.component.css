@@ -1,4 +1,3 @@
-/* login style */
 #navBar{
     position: fixed;
     margin: 1vmax;
@@ -89,76 +88,6 @@
     font-size: 1.1vmax;
     margin-top: .1vmax;
 }
-#createName{
-    margin-left: -2vmax;
-    margin-top: .5vmax;
-    width: 15vmax;
-    font-size: 1vmax;
-    background: none;
-    font-weight: 400;
-    line-height: 1.4;
-    border: none;
-    transition: all 0.2s ease-in-out;
-    
-}
-#createName:hover{
-    font-size: 1.2vmax;
-    margin-top: -.1vmax;
-}
-
-
-#regOuter{
-    border-radius: 3vmax;
-}
-
-#regOuterbox{
-    width: 50vmax;
-    height: 37vmax;
-    border-radius: 1vmax;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 .4vmax 1.2vmax 0 rgba(0, 0, 0, 0.2), 0 .8vmax 2vmax 0 rgba(0, 0, 0, 0.19);
-    font-size: 3vmax;
-    font-weight: 400;
-    font-family: 'Noto Serif Khojki', serif;
-    padding-top:1.3vmax ;
-
-}
-#RegName{
-    font-weight: 500;
-}
-#regBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#regformbox{
-    display: flex;
-}
-.regLabel{
-    font-size: 1vmax;
-    font-weight: 500;
-}
-#uname{
-    text-transform: capitalize;
-}
-#uname::placeholder{
-    text-transform: lowercase;
-}
-.regInp{
-    width: 16vmax;
-    height: 2.9vmax;
-    margin-bottom: -1vmax;
-    font-size: .8vmax;
-    padding-left: 2vmax;
-    background: none;
-    border: none;
-    border-bottom: .1vmax solid grey;
-}
-
-.regInp:focus{
-    background: none;
-}
 .iconIn{
     position: absolute;
     font-size: 1vmax;
@@ -181,45 +110,4 @@
     margin-top: -1vmax;
     margin-left: 13.5vmax;
     font-size: 1vmax;
-}
-.regBtn{
-    width: 16vmax;
-    height: 3.3vmax;
-    font-size: 1.2vmax;
-    margin-top: 3vmax;
-    margin-bottom: -1.5vmax;
-    font-weight: 100;
-    transition: all 0.2s ease-in-out;
-
-}
-.regBtn:hover{
-    font-size: 1.25vmax;
-    border: .1vmax solid green;
-}
-#reglinkBox{
-   margin-top: 3vmax;
-   display: flex;
-   justify-content: center;
-}
-#logdes{
-    margin-top: .5vmax;
-    font-size: 1vmax;
-    text-decoration: none;
-    color: #9c0c0c;
-}
-#loginName{
-    width: 7vmax;
-    font-size: 1.5vmax;
-    background: none;
-    border: none;
-    transition: all 0.2s ease-in-out;
-}
-#loginName:hover{
-    font-size: 1.8vmax;
-}
-#regerror{
-    position: absolute;
-    margin-left: -10vmax;
-    margin-top: -1vmax;
-
 }

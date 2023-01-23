@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'popup', component: PopupComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'admin', component: AdminComponent },
 ];
 
 @NgModule({

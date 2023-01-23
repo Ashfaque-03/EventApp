@@ -67,15 +67,18 @@
                 <div id="prolinkbox"><a type="button" id="proLink" (click)="showPro()">profile <i class="fa fa-edit"></i></a></div>
             </div>
             <div>
-                <button class="optBtn" (click)="addedShow()">Saved Events</button>
-                <button class="optBtn" (click)="cartShow()">Cart</button>
-                <button class="optBtn" (click)="deletedShow()">Deleted Events</button>
+                <button class="optBtn" (click)="addedShow()" *ngIf="user=='customer'">Saved Events</button>
+                <button class="optBtn" (click)="cartShow()" *ngIf="user=='customer'">Cart</button>
+                <button class="optBtn" (click)="addedShow()" *ngIf="user=='admin'">Orders</button>
+                <button class="optBtn" (click)="cartShow()" *ngIf="user=='admin'">Confirmed Orders</button>
+                <button class="optBtn" (click)="deletedShow()" *ngIf="user=='admin'">Deleted Orders</button>
+                <button class="optBtn" (click)="deletedShow()" *ngIf="user=='customer'">Deleted Events</button>
                 <button class="optBtn" (click)="settings()">Settings</button>
                     <!-- account settings -->
                     <div id="accSettings" *ngIf="accSettingshow==true">
                         <button class="optBtn settingBtn" (click)="logdetails()">Logging details</button>
                         <button class="optBtn settingBtn" (click)="security()">Security</button>
-                        <button class="optBtn settingBtn" (click)="AccDelete()">Delete Account</button>
+                        <button class="optBtn settingBtn" (click)="AccDelete()" *ngIf="userId!='EAdmin001'">Delete Account</button>
 
                     </div>
                 <button class="optBtn"  (click)="logout()">Logout</button>

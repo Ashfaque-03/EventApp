@@ -39,6 +39,7 @@ const eventCart =(userid,Ename,Edate)=>{
                 UniqueId:userid,
                 EventName:Ename,
                 EventDate:Edate,
+                confirm:false
             })
             newEvent.save()
             return{

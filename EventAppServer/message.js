@@ -1,7 +1,13 @@
 const db =require('./db.js')
 
-const messageCreation = (userid,msg) =>{
-    return db.User.findOne({"UniqueId":userid})
+const messageCreation = (userid,msg,user) =>{
+    if(user=="admin"){
+        var database=db.Admin
+    }
+    else{
+        var database=db.User
+    }
+    return database.findOne({"UniqueId":userid})
     .then(user=>{
         if(user){
             return db.Message.findOne({"UniqueId":userid})
@@ -52,8 +58,14 @@ const messageCreation = (userid,msg) =>{
     })
 }
 
-const messageHistory =(userid) =>{
-    return db.User.findOne({"UniqueId":userid})
+const messageHistory =(userid,user) =>{
+    if(user=="admin"){
+        var database=db.Admin
+    }
+    else{
+        var database=db.User
+    }
+    return database.findOne({"UniqueId":userid})    
     .then(user=>{
         if(user){
             return db.Message.find()

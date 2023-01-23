@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit{
   Ipswd:boolean=true
   IpswdC:boolean=true
   Uid:any=JSON.parse(localStorage.getItem('userId') || '')
+  user:any=JSON.parse(localStorage.getItem('user') || '')
   Uname:any
   Umobile:any
   Uemail:any
@@ -39,9 +40,10 @@ export class ProfileComponent implements OnInit{
   @Input() showProfile: boolean|undefined
   @Output() back = new EventEmitter()
   constructor(private service: AuthenticateService,private route:Router, private fb:FormBuilder       ){
-
+    this.Uid=JSON.parse(localStorage.getItem('userId') || '')
+    this.user=JSON.parse(localStorage.getItem('user') || '')
     //user data fetching from database
-    service.userDetails(this.Uid)
+    this.service.userDetails(this.Uid,this.user)
     .subscribe((result:any)=>{
       if(result){
         this.Uname=result.userName
@@ -57,7 +59,7 @@ export class ProfileComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
+    
   }
 
   editBtn(){
@@ -74,7 +76,7 @@ export class ProfileComponent implements OnInit{
     this.Iname=true
     this.about=true
     //profile editting
-    this.service.updateProfile(this.Uid,this.Uname,this.aboutField)
+    this.service.updateProfile(this.Uid,this.Uname,this.aboutField,this.user)
     .subscribe((result:any)=>{
       if(result){
         this.Uname=result.newName
@@ -107,7 +109,7 @@ export class ProfileComponent implements OnInit{
     if(this.oldPswd==curPswd){
       if(this.pswdForm.valid){
         if(newPswd==CnewPswd){  
-          this.service.updatePswd(this.Uid,newPswd)
+          this.service.updatePswd(this.Uid,newPswd,this.user)
           .subscribe((result:any)=>{
             if(result){
               alert(result.message)

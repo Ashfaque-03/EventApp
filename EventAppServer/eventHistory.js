@@ -66,4 +66,6 @@ const delHistory = (userid)=>{
     })
 }
 
+
+
 module.exports={addHistory,delHistory,cartHistory}

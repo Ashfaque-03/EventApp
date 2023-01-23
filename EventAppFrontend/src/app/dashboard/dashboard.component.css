@@ -191,7 +191,7 @@
     padding-bottom: .3vmax;
     margin-bottom: 0vmax;
     margin-top: .5vmax;
-    font-size: 1.3vmax;
+    font-size: 1vmax;
     color: white;
     text-align: left;
     background-color: rgb(7, 16, 64);
@@ -200,11 +200,20 @@
     border-top-right-radius: .5vmax;
     word-break: break-all;
 }
+.Muser{
+    color: white;
+    text-align: right;
+    background-color: rgb(15, 118, 43);
+    border-bottom-left-radius: .7vmax;
+    border-bottom-right-radius: .5vmax;
+    border-top-left-radius: .5vmax;
+    border-top-right-radius: 0vmax;
+}
 
 #pointposition{
     font-size: .8vmax;
-    color: rgb(217, 209, 209);
-    text-align: right;
+    color:grey;
+    /* text-align: right; */
 }
 .lastspace{
     width: 100%;
@@ -298,6 +307,7 @@
     border-radius: 1vmax;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
     text-transform: uppercase;
+    transition: all .3s;
 }
 
 .evtnamebox:hover{
@@ -313,7 +323,15 @@
     height: 9vmax;
     text-transform: uppercase;
 } 
-
+.inp{
+    width: 30vmax;
+    margin: 10px;
+    font-size: 1.2vmax;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
 #eventdatebox{
     margin-top: 130px;
     margin-left: 1vmax;
@@ -325,6 +343,8 @@
     font-weight: 600;
     word-wrap: break-word;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    transition: all .3s;
+
 }
 .dateBox{
     display: flex;

@@ -11,11 +11,8 @@ import { PopupComponent } from './popup/popup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DatePipe } from '@angular/common';
-// import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
 import { ProfileComponent } from './profile/profile.component';
-// import { CalenderComponent } from './calender/calender.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -26,7 +23,7 @@ import { ProfileComponent } from './profile/profile.component';
     DashboardComponent,
     NavbarComponent,
     ProfileComponent,
-    // CalenderComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +31,10 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    DatePipe,
-    // MatDatepickerModule,
-    // MatNativeDateModule,
-    // MatSelectModule 
+    DatePipe
+  ],
+  exports:[
+    DashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

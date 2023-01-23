@@ -9,16 +9,6 @@
             <!-- app name -->
             <div id="appNamebox"><span class="fappname">A</span>LL <span class="fappname">E</span>VENTS</div>
         </div>
-
-        <!-- content center navbar -->
-        <div> </div>
-
-        <!-- profile -->
-        <!-- <div id="profileBox" type="button" (click)="OptClose()" *ngIf="settings==false">
-            <div id="pro_pic" class="container"></div>
-            <div id="username">{{userName}}</div>
-        </div> -->
-
     </div>
 <!-- login box -->
 
@@ -77,7 +67,7 @@
                         <i class="fa fa-lock iconIn"></i>        
                         <i class="fa fa-eye iconIn showHide" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
                         <i class="fa fa-eye-slash  iconIn showHide" type="button" *ngIf="visibility==false" (click)="hideShow()"></i> 
-                        <div class="errorMsg" style="text-align: start;" *ngIf="(this.registerForm.get('pswd')?.errors)&&(this.registerForm.get('pswd')?.touched)" >
+                        <div class="errorMsg" *ngIf="(this.registerForm.get('pswd')?.errors)&&(this.registerForm.get('pswd')?.touched)" >
                             <span>*must include a lower case, upper case, number, special and min 8 characters</span> 
                         </div>                    
                     </div>

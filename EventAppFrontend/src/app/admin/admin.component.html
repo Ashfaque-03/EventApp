@@ -1,0 +1,38 @@
+    <!-- NavBar -->
+    <div id="navBar">
+        <div id="app">
+            <!-- logo -->
+            <div id="applogo"></div>
+            <!-- app name -->
+            <div id="appNamebox"><span class="fappname">A</span>LL <span class="fappname">E</span>VENTS</div>
+        </div>
+    </div>
+<!-- login box -->
+
+<div id="loginOuter" class="centered">
+    <div id="loginOuterbox" >
+        <!-- <button class="logreg" id="logbtnup">Login</button>
+        <button class="logreg">Register</button> -->
+        <div class="text-center" id="logName">Log In</div>
+        <div id="logBox" class="">
+            <form action="" >
+                <label for="userId" class="logLabel">Admin id:</label>
+                <input type="text" [(ngModel)]="userId" name="userId" id="userId" class="form-control logInp" placeholder="Admin id">
+                <i class="fa fa-user iconIn"></i>
+                <p *ngIf="errormsg==true" class="loginmsg">*wrong admin id or password</p>   
+                <label for="password" class="logLabel">Password:</label>
+                <input [type]="inpType" [(ngModel)]="pswrd" name="password" id="password" class="form-control logInp" placeholder="password">      
+                <i class="fa fa-lock iconIn"></i>        
+                <i class="fa fa-eye iconIn showHide" type="button" *ngIf="visibility==true" (click)="hideShow()"></i>        
+                <i class="fa fa-eye-slash  iconIn showHide" type="button" *ngIf="visibility==false" (click)="hideShow()"></i>  
+                <p *ngIf="errormsg==true" class="loginmsg">*wrong admin id or password</p>   
+                <button class="form-control logBtn bg-success text-white" (click)="loginCheck()">Log In</button>   
+                <!-- <input type="submit" name="" id="" class="form-control logBtn bg-success text-white" value=""> -->
+                <div class="" id="linkBox">
+                    <a href="" id="link">forget password ?</a>
+                    <!-- <button id="createName" (click)="createLink()">Create Your Account</button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
